@@ -10,32 +10,57 @@
             margin:0;
             padding:0;
             box-sizing:border-box;
-            font-family:Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body{
-            background:#f4f4f4;
+            background:linear-gradient(135deg,#4facfe,#00f2fe);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            padding:20px;
         }
 
         .container{
-            width:90%;
-            max-width:600px;
-            margin:50px auto;
             background:#fff;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,0.2);
+            width:100%;
+            max-width:900px;
+            display:flex;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
         }
 
-        h1{
-            text-align:center;
+        .left{
+            width:40%;
+            background:#0d6efd;
+            color:#fff;
+            padding:40px 30px;
+        }
+
+        .left h2{
             margin-bottom:20px;
-            color:#333;
+            font-size:32px;
         }
 
-        p{
-            text-align:center;
-            color:#666;
+        .left p{
+            margin-bottom:30px;
+            line-height:1.6;
+        }
+
+        .info{
+            margin-bottom:20px;
+            font-size:18px;
+        }
+
+        .right{
+            width:60%;
+            padding:40px;
+        }
+
+        .right h2{
+            color:#333;
             margin-bottom:20px;
         }
 
@@ -44,65 +69,104 @@
             flex-direction:column;
         }
 
-        input, textarea{
-            padding:12px;
-            margin-bottom:15px;
+        input,
+        textarea{
+            width:100%;
+            padding:14px;
+            margin-bottom:18px;
             border:1px solid #ccc;
-            border-radius:5px;
+            border-radius:8px;
             font-size:16px;
+            transition:.3s;
+        }
+
+        input:focus,
+        textarea:focus{
+            border-color:#0d6efd;
+            outline:none;
+            box-shadow:0 0 8px rgba(13,110,253,.3);
         }
 
         textarea{
-            resize:vertical;
-            height:120px;
+            resize:none;
+            height:140px;
         }
 
         button{
-            padding:12px;
-            background:#007BFF;
+            background:#0d6efd;
             color:white;
             border:none;
-            border-radius:5px;
+            padding:15px;
+            border-radius:30px;
             font-size:18px;
             cursor:pointer;
+            transition:.3s;
         }
 
         button:hover{
-            background:#0056b3;
+            background:#084298;
+            transform:translateY(-2px);
         }
 
-        .contact-info{
-            margin-top:25px;
-            text-align:center;
-            color:#444;
+        @media(max-width:768px){
+
+            .container{
+                flex-direction:column;
+            }
+
+            .left,
+            .right{
+                width:100%;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Contact Us</h1>
-        <p>We'd love to hear from you!</p>
+<div class="container">
 
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
+    <div class="left">
+        <h2>Contact Us</h2>
 
-            <input type="email" name="email" placeholder="Your Email" required>
+        <p>
+            We'd love to hear from you. Feel free to send us your questions,
+            suggestions, or feedback using the contact form.
+        </p>
 
-            <input type="text" name="subject" placeholder="Subject">
+        <div class="info">
+            📍 Mumbai, Maharashtra, India
+        </div>
 
-            <textarea name="message" placeholder="Your Message" required></textarea>
+        <div class="info">
+            📞 +91 98765 43210
+        </div>
 
-            <button type="submit">Send Message</button>
-        </form>
-
-        <div class="contact-info">
-            <h3>Contact Information</h3>
-            <p>Email: info@example.com</p>
-            <p>Phone: +91 98765 43210</p>
-            <p>Address: Mumbai, Maharashtra, India</p>
+        <div class="info">
+            ✉ contact@example.com
         </div>
     </div>
+
+    <div class="right">
+
+        <h2>Send us a Message</h2>
+
+        <form action="#" method="post">
+
+            <input type="text" placeholder="Full Name" required>
+
+            <input type="email" placeholder="Email Address" required>
+
+            <input type="text" placeholder="Subject">
+
+            <textarea placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </div>
+
+</div>
 
 </body>
 </html>
