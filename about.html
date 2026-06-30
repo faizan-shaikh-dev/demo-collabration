@@ -1,263 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Us | Your Brand</title>
+<title>About — Studio Name</title>
 
-<meta name="description" content="Learn about our mission, values, team, and journey.">
+<meta name="description" content="A creative technology studio building thoughtful digital experiences.">
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
 <style>
 
+
 :root {
-    --bg: #0b0b0d;
-    --surface: #141419;
-    --text: #ffffff;
-    --muted: #a1a1aa;
-    --accent: #7c3aed;
-    --accent-light: #a78bfa;
-    --border: rgba(255,255,255,0.1);
+
+--paper:#f4f1ea;
+--ink:#111111;
+--gray:#6e6b65;
+--line:#d8d2c7;
+--accent:#c84b32;
+
 }
 
 
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-
-html {
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 
 body {
-    font-family:"Inter", sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
+
+background:var(--paper);
+color:var(--ink);
+font-family:"Manrope",sans-serif;
+
+}
+
+
+html {
+scroll-behavior:smooth;
 }
 
 
 .container {
-    width:min(1200px,90%);
-    margin:auto;
+
+width:min(1250px,90%);
+margin:auto;
+
 }
 
 
 section {
-    padding:100px 0;
+
+padding:120px 0;
+
 }
 
 
-/* HEADER */
+/* NAV */
 
-header {
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:100;
-    backdrop-filter:blur(12px);
-    background:rgba(11,11,13,0.7);
-    border-bottom:1px solid var(--border);
+
+nav {
+
+position:fixed;
+top:0;
+width:100%;
+z-index:10;
+
+background:rgba(244,241,234,.8);
+backdrop-filter:blur(12px);
+
 }
 
 
-.nav {
-    height:80px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.nav-inner {
+
+height:90px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
 }
 
 
 .logo {
-    font-size:24px;
-    font-weight:800;
+
+font-size:22px;
+font-weight:700;
+letter-spacing:-1px;
+
 }
 
 
-.nav a {
-    color:white;
-    text-decoration:none;
-    margin-left:30px;
-    font-size:14px;
+.menu {
+
+display:flex;
+gap:40px;
+
 }
+
+
+.menu a {
+
+text-decoration:none;
+color:var(--ink);
+font-size:14px;
+
+}
+
 
 
 /* HERO */
 
 
 .hero {
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
+
+min-height:100vh;
+display:flex;
+align-items:center;
+
 }
 
 
-.hero::before {
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    background:var(--accent);
-    filter:blur(150px);
-    opacity:.4;
-    top:10%;
-    right:10%;
-}
+.hero-grid {
 
+display:grid;
+grid-template-columns:1.4fr .6fr;
+gap:40px;
 
-.hero-content {
-    position:relative;
-    max-width:850px;
 }
 
 
 .hero h1 {
-    font-size:clamp(45px,7vw,90px);
-    line-height:1;
-    font-weight:900;
+
+font-family:"Instrument Serif";
+font-size:clamp(70px,9vw,130px);
+font-weight:400;
+line-height:.88;
+letter-spacing:-3px;
+
 }
 
 
-.hero span {
-    color:var(--accent-light);
+.hero h1 span {
+
+font-style:italic;
+
 }
 
 
-.hero p {
-    margin-top:30px;
-    max-width:650px;
-    color:var(--muted);
-    font-size:20px;
+.hero-description {
+
+margin-top:60px;
+max-width:420px;
+font-size:18px;
+color:var(--gray);
+
 }
 
 
-.btn {
-    display:inline-block;
-    margin-top:40px;
-    padding:16px 35px;
-    border-radius:50px;
-    background:white;
-    color:black;
-    text-decoration:none;
-    font-weight:600;
+.hero-side {
+
+display:flex;
+align-items:flex-end;
+
 }
 
 
-/* HEADINGS */
+.small-note {
 
-.section-title {
-    max-width:700px;
-    margin-bottom:60px;
-}
+font-size:13px;
+text-transform:uppercase;
+letter-spacing:2px;
+color:var(--gray);
 
-
-.section-title h2 {
-    font-size:48px;
-}
-
-
-.section-title p {
-    color:var(--muted);
-    margin-top:15px;
 }
 
 
 
-/* CARDS */
+
+/* INTRO */
 
 
-.grid {
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+.intro {
+
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:80px;
+
 }
 
 
-.card {
-    background:var(--surface);
-    border:1px solid var(--border);
-    padding:35px;
-    border-radius:25px;
-    transition:.3s;
+.label {
+
+font-size:12px;
+letter-spacing:3px;
+text-transform:uppercase;
+color:var(--accent);
+
 }
 
 
-.card:hover {
-    transform:translateY(-8px);
-    border-color:var(--accent);
-}
+.intro-text {
 
+font-family:"Instrument Serif";
+font-size:55px;
+line-height:1.05;
 
-.card h3 {
-    margin-bottom:15px;
-}
-
-
-.card p {
-    color:var(--muted);
-}
-
-
-
-/* STATS */
-
-.stats {
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-
-.stat {
-    text-align:center;
-}
-
-
-.stat h3 {
-    font-size:50px;
-}
-
-
-.stat p {
-    color:var(--muted);
 }
 
 
 
-/* TIMELINE */
+/* BELIEFS */
 
 
-.timeline {
-    border-left:2px solid var(--accent);
-    padding-left:30px;
+.belief {
+
+display:grid;
+grid-template-columns:100px 1fr;
+padding:50px 0;
+border-top:1px solid var(--line);
+
 }
 
 
-.event {
-    margin-bottom:50px;
+.number {
+
+color:var(--accent);
+font-size:18px;
+
 }
 
 
-.event h3 {
-    margin-bottom:10px;
+.belief h3 {
+
+font-size:35px;
+font-weight:500;
+margin-bottom:15px;
+
 }
 
 
-.event p {
-    color:var(--muted);
+.belief p {
+
+max-width:600px;
+color:var(--gray);
+
+}
+
+
+
+/* WORK */
+
+
+.work-header {
+
+display:flex;
+justify-content:space-between;
+align-items:end;
+
+}
+
+
+.work-title {
+
+font-family:"Instrument Serif";
+font-size:70px;
+
+}
+
+
+.projects {
+
+margin-top:70px;
+
+}
+
+
+.project {
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+padding:70px 0;
+border-top:1px solid var(--line);
+
+}
+
+
+.project-image {
+
+height:450px;
+background:#ddd;
+overflow:hidden;
+
+}
+
+
+.project-image img {
+
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.6s;
+
+}
+
+
+.project:hover img {
+
+transform:scale(1.05);
+
+}
+
+
+.project h3 {
+
+font-family:"Instrument Serif";
+font-size:55px;
+font-weight:400;
+
+}
+
+
+.project p {
+
+margin-top:20px;
+color:var(--gray);
+
+}
+
+
+
+
+/* PROCESS */
+
+
+.process {
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:50px;
+
+}
+
+
+.process h3 {
+
+font-size:24px;
+margin-bottom:20px;
+
+}
+
+
+.process p {
+
+color:var(--gray);
+
 }
 
 
@@ -265,20 +374,35 @@ header {
 /* TEAM */
 
 
-.member img {
-    width:100%;
-    border-radius:20px;
-    margin-bottom:20px;
+.team {
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+
 }
 
 
-.member h3 {
-    font-size:22px;
+.person img {
+
+width:100%;
+filter:grayscale(100%);
+
 }
 
 
-.role {
-    color:var(--accent-light);
+.person h3 {
+
+margin-top:20px;
+font-size:22px;
+
+}
+
+
+.person span {
+
+color:var(--gray);
+
 }
 
 
@@ -286,37 +410,49 @@ header {
 /* CTA */
 
 
-.cta {
-    background:linear-gradient(
-        135deg,
-        #18181b,
-        #111827
-    );
-    border-radius:40px;
-    text-align:center;
-    padding:80px 30px;
+.contact {
+
+padding:150px 0;
+text-align:center;
+
 }
 
 
-.cta h2 {
-    font-size:50px;
+.contact h2 {
+
+font-family:"Instrument Serif";
+font-size:90px;
+font-weight:400;
+
 }
 
 
-.cta p {
-    color:var(--muted);
-    margin:20px auto;
-    max-width:600px;
+.contact a {
+
+display:inline-block;
+margin-top:40px;
+padding:18px 45px;
+
+background:var(--ink);
+color:white;
+
+text-decoration:none;
+border-radius:100px;
+
 }
 
 
 
 /* FOOTER */
 
+
 footer {
-    padding:40px 0;
-    text-align:center;
-    color:var(--muted);
+
+border-top:1px solid var(--line);
+padding:40px 0;
+font-size:14px;
+color:var(--gray);
+
 }
 
 
@@ -324,44 +460,76 @@ footer {
 /* ANIMATION */
 
 
-.reveal {
-    opacity:0;
-    transform:translateY(40px);
-    transition:.8s;
+.fade {
+
+opacity:0;
+transform:translateY(30px);
+animation:appear 1s forwards;
+
 }
 
 
-.reveal.active {
-    opacity:1;
-    transform:none;
+@keyframes appear {
+
+to {
+
+opacity:1;
+transform:none;
+
+}
+
 }
 
 
 
-/* RESPONSIVE */
+/* MOBILE */
 
 
-@media(max-width:900px){
+@media(max-width:800px){
 
-.grid,
-.stats {
-    grid-template-columns:1fr;
+
+.hero-grid,
+.intro,
+.project {
+
+grid-template-columns:1fr;
+
 }
 
 
 .hero h1 {
-    font-size:55px;
+
+font-size:70px;
+
 }
 
 
-.section-title h2,
-.cta h2 {
-    font-size:38px;
+.intro-text {
+
+font-size:40px;
+
 }
 
 
-.nav a {
-    display:none;
+.process,
+.team {
+
+grid-template-columns:1fr;
+
+}
+
+
+.contact h2 {
+
+font-size:55px;
+
+}
+
+
+.menu {
+
+display:none;
+
 }
 
 }
@@ -369,130 +537,116 @@ footer {
 
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
-<header>
-
-<div class="container nav">
-
-<div class="logo">
-YourBrand
-</div>
 
 <nav>
-<a href="#">Home</a>
-<a href="#story">Story</a>
-<a href="#team">Team</a>
+
+<div class="container nav-inner">
+
+<div class="logo">
+STUDIO / 01
+</div>
+
+
+<div class="menu">
+
+<a href="#about">About</a>
+<a href="#work">Work</a>
 <a href="#contact">Contact</a>
-</nav>
 
 </div>
 
-</header>
+</div>
+
+</nav>
 
 
-
-<main>
 
 
 <section class="hero">
 
-<div class="container hero-content reveal">
+
+<div class="container hero-grid fade">
+
+
+<div>
 
 <h1>
-We create
-<span>digital experiences</span>
-that matter.
+
+Building
+<span>digital</span>
+experiences
+with intention.
+
 </h1>
 
-<p>
-We are a creative technology team focused on building meaningful products,
-beautiful interfaces, and solutions that connect people with technology.
+
+<p class="hero-description">
+
+We are an independent design and technology studio creating products,
+interfaces and identities for people who care about thoughtful details.
+
 </p>
 
 
-<a class="btn" href="#contact">
-Work With Us
-</a>
+</div>
+
+
+
+<div class="hero-side">
+
+<p class="small-note">
+
+Based in Mumbai<br>
+Working globally<br>
+Since 2020
+
+</p>
+
 
 </div>
+
+
+</div>
+
 
 </section>
 
 
 
 
-<section>
 
-<div class="container">
+<section id="about">
 
 
-<div class="section-title reveal">
+<div class="container intro">
 
-<h2>
-Our Mission
-</h2>
 
-<p>
-We combine creativity, technology, and strategy to create experiences
-that solve real problems and deliver measurable impact.
-</p>
-
+<div class="label">
+About us
 </div>
 
 
+<div class="intro-text">
 
-<div class="grid">
-
-
-<div class="card reveal">
-
-<h3>
-Innovation
-</h3>
-
-<p>
-We constantly explore new technologies and ideas to build future-ready solutions.
-</p>
-
-</div>
-
-
-<div class="card reveal">
-
-<h3>
-Design First
-</h3>
-
-<p>
-Every product starts with understanding users and creating intuitive experiences.
-</p>
-
-</div>
-
-
-<div class="card reveal">
-
-<h3>
-Quality
-</h3>
-
-<p>
-We focus on performance, reliability, and attention to every detail.
-</p>
+We believe technology should feel human.
+Simple ideas deserve extraordinary execution.
 
 </div>
 
 
 </div>
 
-</div>
 
 </section>
+
 
 
 
@@ -500,104 +654,80 @@ We focus on performance, reliability, and attention to every detail.
 
 <section>
 
-<div class="container stats">
-
-
-<div class="stat reveal">
-<h3>10+</h3>
-<p>Years Experience</p>
-</div>
-
-
-<div class="stat reveal">
-<h3>120+</h3>
-<p>Projects Completed</p>
-</div>
-
-
-<div class="stat reveal">
-<h3>50+</h3>
-<p>Happy Clients</p>
-</div>
-
-
-<div class="stat reveal">
-<h3>15</h3>
-<p>Team Members</p>
-</div>
-
-
-</div>
-
-</section>
-
-
-
-
-
-<section id="story">
-
 
 <div class="container">
 
 
-<div class="section-title reveal">
+<div class="belief">
 
-<h2>
-Our Journey
-</h2>
-
+<div class="number">
+01
 </div>
 
-
-<div class="timeline">
-
-
-<div class="event reveal">
+<div>
 
 <h3>
-2020 — The Beginning
+Design should disappear.
 </h3>
 
 <p>
-Started with a small team and a vision to create meaningful digital products.
+The best interfaces do not demand attention.
+They quietly guide people toward meaningful actions.
 </p>
 
 </div>
 
+</div>
 
 
-<div class="event reveal">
+
+
+<div class="belief">
+
+<div class="number">
+02
+</div>
+
+<div>
 
 <h3>
-2022 — Growing Together
+Details create trust.
 </h3>
 
 <p>
-Expanded our capabilities and worked with clients across multiple industries.
+Every interaction, animation and decision shapes how people experience a product.
 </p>
 
 </div>
 
+</div>
 
 
-<div class="event reveal">
+
+
+<div class="belief">
+
+<div class="number">
+03
+</div>
+
+<div>
 
 <h3>
-2026 — Building The Future
+Constraints improve creativity.
 </h3>
 
 <p>
-Continuing to innovate and create technology experiences worldwide.
+Great work comes from solving real problems, not adding unnecessary complexity.
 </p>
 
 </div>
 
-
 </div>
 
 
 </div>
+
 
 </section>
 
@@ -606,80 +736,230 @@ Continuing to innovate and create technology experiences worldwide.
 
 
 
-<section id="team">
+
+<section id="work">
 
 
 <div class="container">
 
 
-<div class="section-title reveal">
+<div class="work-header">
 
-<h2>
-Meet The Team
-</h2>
+<div class="work-title">
+Selected Work
+</div>
+
+
+<div class="label">
+Projects / 2020—26
+</div>
+
+
+</div>
+
+
+
+
+<div class="projects">
+
+
+<div class="project">
+
+
+<div class="project-image">
+
+<img src="https://images.unsplash.com/photo-1558655146-d09347e92766">
+
+</div>
+
+
+<div>
+
+<h3>
+Digital Archive
+</h3>
 
 <p>
-A group of designers, developers, and thinkers passionate about technology.
+A knowledge platform redesigned around exploration,
+search and human curiosity.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="project">
+
+
+<div class="project-image">
+
+<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+
+</div>
+
+
+<div>
+
+<h3>
+Brand System
+</h3>
+
+<p>
+A complete identity system built for a technology company entering a global market.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="process">
+
+
+<div>
+
+<h3>
+01 — Discover
+</h3>
+
+<p>
+Understanding people, problems and possibilities before creating solutions.
 </p>
 
 </div>
 
 
 
-<div class="grid">
+<div>
+
+<h3>
+02 — Design
+</h3>
+
+<p>
+Turning ideas into interfaces that feel natural and memorable.
+</p>
+
+</div>
 
 
-<div class="card member reveal">
+
+<div>
+
+<h3>
+03 — Build
+</h3>
+
+<p>
+Developing reliable digital experiences with modern technology.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="team">
+
+
+<div class="person">
 
 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
 
 <h3>
-Alex Johnson
+Alex Morgan
 </h3>
 
-<p class="role">
-Founder
-</p>
+<span>
+Founder / Designer
+</span>
 
 </div>
 
 
 
-<div class="card member reveal">
+<div class="person">
 
 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
 
 <h3>
-Sarah Lee
+Maya Chen
 </h3>
 
-<p class="role">
-Creative Director
-</p>
+<span>
+Creative Lead
+</span>
 
 </div>
 
 
 
-<div class="card member reveal">
+
+<div class="person">
 
 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d">
 
 <h3>
-David Smith
+Daniel Roy
 </h3>
 
-<p class="role">
-Lead Developer
-</p>
+<span>
+Developer
+</span>
+
+</div>
+
+
 
 </div>
 
 
 </div>
 
-
-</div>
 
 </section>
 
@@ -688,75 +968,46 @@ Lead Developer
 
 
 
-<section id="contact">
+
+<section id="contact" class="contact">
 
 
 <div class="container">
 
 
-<div class="cta reveal">
-
-
 <h2>
-Have a project idea?
+Have something worth building?
 </h2>
 
 
-<p>
-Let's collaborate and create something exceptional together.
-</p>
-
-
-<a class="btn" href="#">
-Start A Conversation
+<a href="#">
+Start a conversation
 </a>
 
 
 </div>
 
 
-</div>
-
-
 </section>
 
 
-</main>
 
 
 
 <footer>
 
-© 2026 YourBrand. All rights reserved.
+
+<div class="container">
+
+© 2026 Studio / 01
+
+</div>
+
 
 </footer>
 
 
 
-<script>
-
-
-const observer = new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("active");
-
-}
-
-});
-
-});
-
-
-document.querySelectorAll(".reveal")
-.forEach(el=>observer.observe(el));
-
-
-</script>
-
-
 </body>
+
 </html>
