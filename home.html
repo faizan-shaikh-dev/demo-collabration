@@ -3,41 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Welcome to My Website</h1>
+    <header>
+        <div class="logo">MyWebsite</div>
 
-    <p>This is the home page of my practice website.</p>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </header>
 
-    <hr>
+    <section class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>
+            A simple, clean, and modern website created using HTML and CSS.
+            Explore the pages to learn more about us and get in touch.
+        </p>
 
-    <h2>Navigation</h2>
+        <a href="about.html" class="btn">Learn More</a>
+    </section>
 
-    <button onclick="location.href='about.html'">About Us</button>
-    <button onclick="location.href='contact.html'">Contact Us</button>
-    <button onclick="location.href='feedback.html'">Feedback</button>
+    <section class="features">
 
-    <hr>
+        <div class="card">
+            <h2>Simple</h2>
+            <p>Designed with clean layouts and easy navigation.</p>
+        </div>
 
-    <h2>About This Website</h2>
-    <h3>this is demo</h3>
-    <p>
-        This website is created using basic HTML for practice.
-        It contains multiple pages connected through navigation buttons.
-    </p>
+        <div class="card">
+            <h2>Responsive</h2>
+            <p>Looks neat on desktops, tablets, and mobile devices.</p>
+        </div>
 
-    <h2>Features</h2>
-    <ul>
-        <li>Simple and easy to understand</li>
-        <li>Navigation between pages</li>
-        <li>Beginner-friendly HTML structure</li>
-    </ul>
+        <div class="card">
+            <h2>Professional</h2>
+            <p>A modern homepage suitable for practice projects.</p>
+        </div>
+
+    </section>
 
     <footer>
-        <hr>
-        <p>&copy; 2026 My Practice Website</p>
+        <p>&copy; 2026 MyWebsite. All Rights Reserved.</p>
     </footer>
 
 </body>
